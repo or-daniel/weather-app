@@ -1,0 +1,20 @@
+h1 {
+  font-weight: unset;
+  font-size: unset;
+  line-height: 2rem;
+}
+
+h1 .headline {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h1 .location {
+  font-size: 1.2rem;
+  color: #383838;
+}
+
+h1 .time {
+  font-size: 1rem;
+  color: #6f7585;
+}

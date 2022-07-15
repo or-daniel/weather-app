@@ -1,0 +1,54 @@
+.open-day-ticket__day-summary {
+  display: flex;
+  height: 100px;
+}
+
+.accordion-handler {
+  text-align: right;
+  cursor: pointer;
+}
+
+.open-day-ticket__day-summary .degrees {
+  font-size: 3.5rem;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.open-day-ticket .description {
+  font-size: 1rem;
+}
+
+.open-day-ticket__day-summary img {
+  flex-shrink: 0;
+}
+
+.open-day-ticket__details-table {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  border-radius: 10px;
+  border: 1px solid #d4d4d4;
+  padding: 15px;
+}
+
+.open-day-ticket__details-table .cell {
+  display: flex;
+  font-size: 1rem;
+}
+
+.open-day-ticket__details-table .cell .cell-icon {
+  flex-shrink: 0;
+  padding-right: 20px;
+  color: #0039aa;
+}
+
+.open-day-ticket__details-table .cell .cell-info {
+  flex-grow: 1;
+}
+
+.open-day-ticket__details-table .cell .cell-info .cell-info__details {
+  font-weight: bold;
+}
