@@ -4,7 +4,7 @@ An application used to get today's weather based on the client geo-location, bui
 
 ## Project Screen Shot
 
-![App Screenshot](/Users/ordaniel/Desktop/my-personal-projects/coding-home-assignments/Fiverr/fiverr-weather-app/public/Screen Shot 2022-07-15 at 4.00.33 PM.png)
+![App Screenshot](/assets/app-screenshot.png)
 
 ## Installation and Setup Instructions
 
