@@ -4,7 +4,7 @@ An application used to get today's weather based on the client geo-location, bui
 
 ## Project Screen Shot
 
-![App Screenshot](/assets/app-screenshot.png)
+![App Screenshot](https://raw.githubusercontent.com/or-daniel/weather-app/main/assets/app-screenshot.png)
 
 ## Installation and Setup Instructions
 
