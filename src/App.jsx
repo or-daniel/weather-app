@@ -10,35 +10,39 @@ const api = {
 };
 
 export default function App() {
-  const [lat, setLat] = useState(null);
-  const [long, setLong] = useState(null);
+  // const [lat, setLat] = useState(null);
+  // const [long, setLong] = useState(null);
+  const [cords, setCords] = useState(false);
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
+  const [lat, setLat] = useState(null);
+  const [long, setLong] = useState(null);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
       setLat(position.coords.latitude);
       setLong(position.coords.longitude);
+      if (position.coords.latitude && position.coords.longitude) setCords(true);
     });
-    if (!lat || !long) return;
+    if (!cords) return;
 
     getWeather(lat, long)
       .then((weather) => {
-        console.log(JSON.stringify(weather));
-        console.log(weather);
+        // console.log(JSON.stringify(weather));
+        // console.log(weather);
         setWeatherData(weather);
-        setError(null);
       })
       .catch((err) => {
         setError(err.message);
       });
-  }, [lat, long, error]);
+  }, [cords, error]);
 
   const handleResponse = (response) => {
     if (response.ok) {
       return response.json();
     } else {
-      throw new Error("Please Enable your Location in your browser!");
+      // console.log(response);
+      // throw new Error("Please Enable your Location in your browser!");
     }
   };
 
@@ -51,8 +55,15 @@ export default function App() {
         if (Object.entries(weather).length) {
           return weather;
         }
+      })
+      .catch((err) => {
+        console.log("err");
+        console.log(err);
+        setError(err.message);
       });
   };
+
+  if (error) return <div>{error}</div>;
 
   return (
     <div className="App">

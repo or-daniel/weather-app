@@ -20,17 +20,18 @@ function OpenDayTicket({ weatherData, accordionClickHandler }) {
       <div className="open-day-ticket__day-summary">
         <div className="degrees">
           {`${Math.round(weatherData.main.temp)}°C`}
+          <img
+            src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+          />
         </div>
-        <img
-          src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
-        />
+        <div className="description">
+          {capitalize(
+            `Feels like ${Math.round(weatherData.main.feels_like)}°C. `
+          )}
+          {capitalize(weatherData.weather[0].description)}.
+        </div>
       </div>
-      <div className="description">
-        {capitalize(
-          `Feels like ${Math.round(weatherData.main.feels_like)}°C. `
-        )}
-        {capitalize(weatherData.weather[0].description)}.
-      </div>
+
       <div className="open-day-ticket__details-table">
         <div className="cell">
           <div className="cell-icon">
